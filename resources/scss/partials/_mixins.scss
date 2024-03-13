@@ -1,11 +1,7 @@
 @use "./variables" as *;
 
-@mixin main-font-center {
-    text-align: center;
-    font-weight: bold;
-}
-
-@mixin main-font-start {
-    text-align: start;
-    font-weight: bold;
+@mixin active-link {
+    color: $color-active-link;
+    border-bottom: 5px solid $color-active-link;
+    line-height: 138px;
 }

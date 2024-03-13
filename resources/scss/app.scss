@@ -1,14 +1,26 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    font-family: sans-serif;
+html,
+.search-text::placeholder {
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 70%;
+    margin-inline: auto;
 }
 
 img {
@@ -16,39 +28,66 @@ img {
     display: block;
 }
 
-li {
-    list-style-type: none;
-}
-
 a {
+    color: white;
     text-decoration: none;
-    color: black;
 
     &:hover {
         text-decoration: underline;
     }
 }
 
-button:hover {
-    cursor: pointer;
-}
+.top-banner {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: $color-active-link;
+    padding-block: 15px;
 
-h1 {
-    color: $font-color;
-    @include main-font-center;
-}
-
-header {
-    h1 {
-        color: $font-color-third;
+    .container {
+        display: flex;
+        justify-content: end;
+        gap: 40px;
     }
 
-    nav {
-        ul {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            gap: 20px;
+    span:hover {
+        cursor: pointer;
+    }
+}
+
+.header-chevron {
+    margin-left: 4px;
+}
+
+.active-link:hover {
+    @include active-link;
+}
+
+.active-link-condition {
+    @include active-link;
+}
+
+.search-box {
+    border-bottom: 2px solid $color-active-link;
+
+    .search-text {
+        font-size: 15px;
+        height: 40px;
+        border: 0;
+        padding-inline: 15px;
+
+        &::placeholder {
+            color: black;
+            text-align: end;
+            font-size: 20px;
         }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    i {
+        font-size: 20px;
     }
 }

@@ -15,25 +15,50 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $greeting = 'Hello World';
-
-    $data = [
+    $nav_links = [
         [
-            'name' => 'Fabio'
+            'text' => "characters",
+            'status' => false,
         ],
         [
-            'name' => 'Mario'
+            'text' => "comics",
+            'status' => true,
         ],
         [
-            'name' => 'Sara'
+            'text' => "movies",
+            'status' => false,
         ],
         [
-            'name' => 'Alex'
+            'text' => "tv",
+            'status' => false,
+        ],
+        [
+            'text' => "games",
+            'status' => false,
+        ],
+        [
+            'text' => "collectibles",
+            'status' => false,
+        ],
+        [
+            'text' => "videos",
+            'status' => false,
+        ],
+        [
+            'text' => "fans",
+            'status' => false,
+        ],
+        [
+            'text' => "news",
+            'status' => false,
+        ],
+        [
+            'text' => "shop",
+            'status' => false,
         ],
     ];
 
-
-    return view('welcome', compact('data', 'greeting'));
+    return view('welcome', compact('nav_links'));
 })->name('homePage');
 
 Route::get('/about', function () {
