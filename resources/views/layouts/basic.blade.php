@@ -44,6 +44,17 @@
                     }
                 }
             }
+
+            .jumbo-container {
+                figure {
+                    background-color: black;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 700;
+                    height: 350px;
+                    overflow: hidden;
+                }
+            }
         }
     </style>
 
@@ -56,7 +67,7 @@
     </header>
 
     <main>
-        @yield('content')
+        @yield('main_content')
     </main>
 </body>
 

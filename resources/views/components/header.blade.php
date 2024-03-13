@@ -25,3 +25,8 @@
         <i class="fas fa-magnifying-glass"></i>
     </div>
 </nav>
+<section class="jumbo-container">
+    <figure>
+        <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="jumbotron" />
+    </figure>
+</section>

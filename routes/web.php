@@ -58,12 +58,14 @@ Route::get('/', function () {
         ],
     ];
 
-    return view('welcome', compact('nav_links'));
+    $comics = config('comics');
+
+    return view('pages.home', compact('nav_links', 'comics'));
 })->name('homePage');
 
 Route::get('/about', function () {
 
     $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut excepturi deleniti cupiditate deserunt sint reprehenderit quibusdam tempore voluptas quis, nisi id voluptatibus quaerat repellat doloremque eum eos laborum eaque.';
 
-    return view('about', compact('lorem'));
+    return view('pages.about', compact('lorem'));
 })->name('aboutPage');
