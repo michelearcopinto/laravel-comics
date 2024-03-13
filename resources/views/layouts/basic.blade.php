@@ -56,6 +56,93 @@
                 }
             }
         }
+
+        footer {
+            .footer-links {
+                background-image: url('{{ Vite::asset('resources/img/footer-bg.jpg') }}');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: white;
+
+                .container.upper-footer {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .texts-container {
+                        .links-container {
+                            padding-block: 40px 20px;
+                            display: flex;
+                            column-gap: 30px;
+
+
+                            div {
+                                flex-direction: column;
+
+                                h2 {
+                                    text-transform: uppercase;
+                                    margin-bottom: 10px;
+                                }
+
+                                ul {
+
+                                    li {
+                                        margin-bottom: 4px;
+
+                                        a {
+                                            color: rgba($color: #ffffff, $alpha: 0.5);
+                                            text-transform: capitalize;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .lower-footer {
+                            padding-bottom: 40px;
+                        }
+
+                    }
+
+                    figure {
+                        background-image: url('{{ Vite::asset('resources/img/dc-logo-bg.png') }}');
+                        background-position: 0 60%;
+                        width: 563px;
+                        height: 445px;
+                    }
+                }
+            }
+
+            .footer-accounts {
+                padding-block: 25px;
+
+                .container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    button {
+                        text-transform: uppercase;
+                        color: white;
+                        padding: 10px;
+                        font-weight: 700;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        div {
+                            display: flex;
+
+                            figure {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     </style>
 
     @yield('style')
@@ -69,6 +156,10 @@
     <main>
         @yield('main_content')
     </main>
+
+    <footer>
+        @include('components.footer')
+    </footer>
 </body>
 
 </html>
